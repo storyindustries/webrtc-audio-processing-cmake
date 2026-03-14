@@ -6,9 +6,9 @@ add_subdirectory(modules)
 add_subdirectory(system_wrappers)
 add_subdirectory(third_party)
 
-if (have_neon)
-    add_compile_options(-mfloat-abi=soft)
-    add_link_options(-mfloat-abi=soft)
+if (have_armv7)
+    add_compile_options(-mfloat-abi=softfp)
+    add_link_options(-mfloat-abi=softfp)
 endif()
 
 if (have_avx2)
